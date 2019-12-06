@@ -5,6 +5,7 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       errorHandler = require('./handlers/error'),
       authRoutes = require('./routes/auth'),
+      messagesRoutes = require('./routes/messages'),
       PORT = 8081;
 
 //cross origin policy
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 //if theres ever any request that starts with api/auth go use auth routes
 app.use('/api/auth', authRoutes);
+app.use('/api/users/:id/messages', messagesRoutes);
 
 //ALL ROUTES
 //if none a are reached
