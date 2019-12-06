@@ -2,6 +2,7 @@ const express = require('express'),
       app = express(),
       cors = require('cors'),
       bodyParser = require('body-parser'),
+      errorHandler = require('./handlers/error'),
       PORT = 8081;
 
 //cross origin policy
@@ -16,6 +17,8 @@ app.use(function(req,res,next){
     err.status = 404;
     next(err);
 })
+
+app.use(errorHandler);
 
 app.listen(PORT, function(){
     //template strings
