@@ -1,14 +1,18 @@
+require('dotenv').config();
 const express = require('express'),
       app = express(),
       cors = require('cors'),
       bodyParser = require('body-parser'),
       errorHandler = require('./handlers/error'),
+      authRoutes = require('./routes/auth'),
       PORT = 8081;
 
 //cross origin policy
 app.use(cors());
 //because we need to get data as json
 app.use(bodyParser.json());
+//if theres ever any request that starts with api/auth go use auth routes
+app.use('/api/auth', authRoutes);
 
 //ALL ROUTES
 //if none a are reached
