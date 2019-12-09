@@ -46,3 +46,28 @@ ul.nav.navbar-nav li{
     opacity: 50%;
   }
 }
+
+/* HERO HOMEPAGE */
+
+.btn-primary{
+  background-color: #1DA1F2 ;
+  border: none;
+}
+
+.home-hero{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  text-align: center;
+  padding: 1rem;
+  background-position: center center;
+  background-size: cover;
+  flex-direction: column;
+}
+
