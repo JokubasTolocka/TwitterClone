@@ -7,6 +7,7 @@ const express = require('express'),
       authRoutes = require('./routes/auth'),
       {loginRequired, ensureCorrectUser} = require('./middleware/auth');
       messagesRoutes = require('./routes/messages'),
+      db = require('./models'),
       PORT = 8081;
 
 //cross origin policy

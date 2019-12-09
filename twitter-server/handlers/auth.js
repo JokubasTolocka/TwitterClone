@@ -63,7 +63,7 @@ exports.signup = async function(req,res,next){
         return next({
             status: 400,
             message: err.message
-        })
+        });
         //see what kind of error
         //if it is a certain error we can respond
     }
